@@ -9,3 +9,5 @@ class GraphNode {
         return val;
     }
 }
+
+module.exports = GraphNode;
