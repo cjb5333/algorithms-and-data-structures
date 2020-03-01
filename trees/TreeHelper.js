@@ -1,9 +1,19 @@
 const TreeNode = require('./TreeNode');
+const TestHelper = require('../utils/TestHelper');
 
 class TreeHelper {
 
     static createMinBst(sortedArr) {
         return minBst(sortedArr, 0, sortedArr.length - 1);
+    }
+
+    static createRandomMinBst(size) {
+        const vals = [];
+        for (let i=0; i<size; i++) {
+            vals.push(TestHelper.random(0, 100));
+        }
+        vals.sort();
+        return minBst(vals, 0, vals.length - 1);
     }
 }
 
